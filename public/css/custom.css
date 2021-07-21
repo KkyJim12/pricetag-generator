@@ -1,0 +1,88 @@
+@font-face {
+    font-family: minimal;
+    src: url("/fonts/Minimal.ttf");
+}
+
+@font-face {
+    font-family: viola;
+    src: url("/fonts/viola.ttf");
+}
+
+.A4 {
+    background: white;
+    width: 21cm;
+    height: 29.7cm;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 0.5cm;
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+@media print {
+    .page-break {
+        display: block;
+        page-break-before: always;
+    }
+
+    size: A4 portrait;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .A4 {
+        box-shadow: none;
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+
+    .noprint {
+        display: none;
+    }
+
+    .enable-print {
+        display: block;
+    }
+}
+
+body {
+    font-family: minimal;
+}
+
+.family-viola {
+    font-family: violio;
+}
+
+.bg-homeshow {
+    background: #cc0001;
+}
+
+.border-homeshow {
+    border: 4px solid #cc0001;
+}
+
+.text-mini {
+    font-size: 1px;
+    line-height: 1rem;
+}
+
+.spacing-max {
+    letter-spacing: 10px;
+}
+
+.traditional-vertical-writing {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    letter-spacing: 0.3rem;
+}
+
+.trun {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
