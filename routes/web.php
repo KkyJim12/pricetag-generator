@@ -18,4 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pdf', [GenerateController::class, 'price_generate']);
+Route::get('/products', [GenerateController::class, 'index']);
+
+Route::get('/price-generate', [GenerateController::class, 'price_generate']);
+
+Route::post('/pdf', [GenerateController::class, 'import_product']);
+
+Route::delete('delete-product-list', [GenerateController::class, 'delete_product_list']);
