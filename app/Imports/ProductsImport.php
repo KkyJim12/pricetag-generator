@@ -12,12 +12,19 @@ class ProductsImport implements ToModel
      *
      * @return \Illuminate\Database\Eloquent\Model|null
      */
+
+    public function  __construct($image_id)
+    {
+        $this->image_id = $image_id;
+    }
+
     public function model(array $row)
     {
         return new Product([
             'name' => $row[0],
             'price' => $row[1],
             'barcode' => $row[2],
+            'image_id' => $this->image_id,
         ]);
     }
 }

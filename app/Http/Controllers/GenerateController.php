@@ -28,14 +28,14 @@ class GenerateController extends Controller
     {
         $brand = $request->file('brand');
         $filename = uniqid() . '.' . $brand->getClientOriginalExtension();
-        $destinationPath = '/image/';
+        $destinationPath = public_path('/image/');
         $brand->move($destinationPath, $filename);
 
         $image = new Image;
         $image->path = $filename;
         $image->save();
 
-        Excel::import(new ProductsImport, request()->file('excel'));
+        Excel::import(new ProductsImport($image->id), request()->file('excel'));
         return redirect('/products');
     }
 
