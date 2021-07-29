@@ -28,7 +28,7 @@
     size: A4 portrait;
 }
 
-@media print {
+@media print and (min-resolution: 300dpi) {
     body {
         margin: 0;
         padding: 0;
