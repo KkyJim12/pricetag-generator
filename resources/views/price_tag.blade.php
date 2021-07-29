@@ -38,7 +38,7 @@
                         <p class="text-mini font-bold">หมายเหตุ: เงื่อนไขเป็นไปตามที่บริษัทกำหนด</p>
                     </div>
                     <div class="px-1">
-                        <?php echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG($product->barcode, 'C128', 3, 33, array(1, 1, 1), false) . '" alt="barcode"   />'; ?>
+                        <?php echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG($product->barcode, 'C128', 1.9, 2.0, array(1, 1, 1), false) . '" alt="barcode"   />'; ?>
                     </div>
                     <div class="text-center">
                         <h3 class="text-xs font-medium spacing-max">{{ $product->barcode }}</h3>
