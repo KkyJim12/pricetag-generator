@@ -39,6 +39,7 @@
         margin: 0;
         width: auto;
         height: auto;
+        page-break-inside: avoid;
     }
 
     .noprint {
@@ -47,6 +48,10 @@
 
     .enable-print {
         display: block;
+    }
+
+    .break {
+        page-break-after: always;
     }
 }
 
@@ -66,8 +71,13 @@ body {
     border: 4px solid #cc0001;
 }
 
+.text-sml {
+    font-size: 0.1rem;
+    line-height: 1rem;
+}
+
 .text-mini {
-    font-size: 1px;
+    font-size: 0.1rem;
     line-height: 1rem;
 }
 
@@ -85,4 +95,19 @@ body {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.layout-small {
+    width: 6cm;
+    height: 3cm;
+}
+
+.layout-medium {
+    width: 7cm;
+    height: 4cm;
+}
+
+.layout-large {
+    width: 9cm;
+    height: 6cm;
 }
