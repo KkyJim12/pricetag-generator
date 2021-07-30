@@ -97,6 +97,10 @@ body {
     text-overflow: ellipsis;
 }
 
+.borderless {
+    outline: 2px solid #cc0001;
+}
+
 .layout-small {
     width: 6cm;
     height: 3cm;

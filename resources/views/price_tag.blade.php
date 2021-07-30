@@ -9,39 +9,41 @@
 </head>
 
 <body>
-    <div class="A4"">
-        <div class="mt-4 grid grid-cols-3 gap-x-1 gap-y-2.5">
+    <div class="A4 p-4 flex">
+        <div class="grid grid-cols-3 gap-x-1 gap-y-2.5 justify-items-center">
             @foreach($products as $product)
-            <div class="layout-small border border-homeshow flex">
+            <div class="layout-small borderless flex relative">
                 <div class="w-min bg-homeshow h-full text-white family-viola flex">
                     <h3 class="traditional-vertical-writing text-sml m-auto">HOME SHOW</h3>
                 </div>
                 <div class="flex flex-col w-full py-1 px-2">
-                    <div class="w-10 h-2"><img class="w-full h-full object-cover" src="/image/{{$product->get_image->path}}"></div>
-                    <div>
-                        <h3 class="font-medium text-sml">{{$product->name}}</h3>
+                    <div class="w-10 h-3"><img class="w-full h-full object-cover" src="/image/{{$product->get_image->path}}"></div>
+                    <div class="absolute mt-3 pr-2">
+                        <h3 class="font-medium text-sml break-all">{{$product->name}}</h3>
                     </div>
-                    <div>
-                        <div class="flex">
-                            <div class="flex flex-1">
-                                <div class="flex flex-grow justify-end">
-                                    <h1 class="text-2xl font-bold text-right">{{ number_format($product->price) }}</h1>
-                                </div>
-                                <div class="mr-auto my-auto pl-2 text-left flex flex-col">
-                                    <p class="font-bold text-sml">.00</h3>
-                                    <h3 class="font-bold text-sml">บาท/กล</h3>
+                    <div class="flex flex-col h-full justify-end">
+                        <div>
+                            <div class="flex">
+                                <div class="flex flex-1">
+                                    <div class="flex flex-grow justify-end">
+                                        <h1 class="text-3xl font-bold text-right truncate">{{ number_format($product->price) }}</h1>
+                                    </div>
+                                    <div class="mr-auto my-auto pl-2 text-left flex flex-col">
+                                        <p class="font-bold text-sml">.00</h3>
+                                        <h3 class="font-bold text-sml">บาท/กล</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="ml-auto">
-                        <p class="text-mini font-bold">หมายเหตุ: เงื่อนไขเป็นไปตามที่บริษัทกำหนด</p>
-                    </div>
-                    <div class="px-1">
-                        <?php echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG($product->barcode, 'C128', 3, 20, array(1, 1, 1), false) . '" alt="barcode"   />'; ?>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-mini font-medium spacing-max">{{ $product->barcode }}</h3>
+                        <div class="ml-auto">
+                            <p class="text-mini font-bold">หมายเหตุ: เงื่อนไขเป็นไปตามที่บริษัทกำหนด</p>
+                        </div>
+                        <div class="px-1">
+                            <?php echo '<img src="data:image/png;base64,' . DNS1D::getBarcodePNG($product->barcode, 'C128', 3, 21, array(1, 1, 1), false) . '" alt="barcode"   />'; ?>
+                        </div>
+                        <div class="text-center">
+                            <h3 class="text-mini font-medium spacing-max">{{ $product->barcode }}</h3>
+                        </div>
                     </div>
                 </div>
             </div>
