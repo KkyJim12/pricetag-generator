@@ -39,7 +39,8 @@
                         <tr>
                             <th scope="row">{{$loop->iteration}}</th>
                             <td>{{$product->name}}</td>
-                            <td>{{number_format($product->price)}}</td>
+                            <td>{{number_format($product->price,2)}}</td>
+                            <td>{{$product->unit}}</td>
                             <td>{{$product->barcode}}</td>
                         </tr>
                         @endforeach
