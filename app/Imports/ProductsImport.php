@@ -23,7 +23,8 @@ class ProductsImport implements ToModel
         return new Product([
             'name' => $row[0],
             'price' => $row[1],
-            'barcode' => $row[2],
+            'unit' => $row[2],
+            'barcode' => $row[3],
             'image_id' => $this->image_id,
         ]);
     }

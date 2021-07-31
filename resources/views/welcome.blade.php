@@ -14,7 +14,7 @@
             <div class="row justify-content-center pt-5">
                 <div class="col-12 mb-5">
                     <h1 class="text-center">Homeshow Pricetag Generator Ver.1.0.0</h1>
-                    <h5 class="text-center">(แถว1.ชื่อสินค้า แถว2.ราคา แถว3.เลขบาร์โค๊ด)</h5>
+                    <h5 class="text-center">(แถว1.ชื่อสินค้า แถว2.ราคา แถว3.หน่วย แถว4.เลขบาร์โค๊ด)</h5>
                 </div>
                 <div class="col-6">
                     <div class="input-group mb-3">

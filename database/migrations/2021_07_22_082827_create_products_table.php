@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->float('price');
             $table->string('barcode');
+            $table->string('unit');
             $table->foreignId('image_id')->nullable();
             $table->timestamps();
         });

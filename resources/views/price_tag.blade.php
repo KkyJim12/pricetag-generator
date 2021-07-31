@@ -10,8 +10,9 @@
 
 <body>
     <div class="A4 p-4 flex">
-        <div class="grid grid-cols-3 gap-x-1 gap-y-2.5 justify-items-center">
+        <div class="grid grid-cols-3 gap-x-1 gap-y-3 justify-items-center">
             @foreach($products as $product)
+            <?php $price = explode('.', $product->price); ?>
             <div class="layout-small borderless flex relative">
                 <div class="w-min bg-homeshow h-full text-white family-viola flex">
                     <h3 class="traditional-vertical-writing text-sml m-auto">HOME SHOW</h3>
@@ -26,11 +27,11 @@
                             <div class="flex">
                                 <div class="flex flex-1">
                                     <div class="flex flex-grow justify-end">
-                                        <h1 class="text-3xl font-bold text-right truncate">{{ number_format($product->price) }}</h1>
+                                        <h1 class="text-3xl font-bold text-right truncate">{{ number_format($price[0]) }}</h1>
                                     </div>
                                     <div class="mr-auto my-auto pl-2 text-left flex flex-col">
-                                        <p class="font-bold text-sml">.00</h3>
-                                        <h3 class="font-bold text-sml">บาท/กล</h3>
+                                        <p class="font-bold text-sml">.{{$price[1]}}</h3>
+                                        <h3 class="font-bold text-sml">{{$product->unit}}</h3>
                                     </div>
                                 </div>
                             </div>
