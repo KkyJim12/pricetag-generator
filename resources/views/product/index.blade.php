@@ -31,6 +31,7 @@
                             <th scope="col">#</th>
                             <th scope="col">name</th>
                             <th scope="col">price</th>
+                            <th scope="col">unit</th>
                             <th scope="col">barcode</th>
                         </tr>
                     </thead>
